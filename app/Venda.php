@@ -8,4 +8,8 @@ class Venda extends Model
 {
     protected $table = 'vendas';
     protected $primaryKey = 'id';
+
+    function produtos(){
+        return $this->belongsToMany('App\Produto');
+    }
 }
